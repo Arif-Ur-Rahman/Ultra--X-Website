@@ -1,0 +1,120 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Role</h2>
+
+          <ul class="list-group" *ngFor="let role of roles; index as i">
+            <li class="list-group-item list-group-item-info">
+              {{ role.title }}
+              <span class="position-absolute top-0 end-0 mt-1">
+                <mat-icon
+                  style="color: green; font-size: 20px"
+                  (click)="openUpdateROleDialog(role._id, role.title)"
+                  >edit</mat-icon
+                >
+                <mat-icon
+                  style="color: red; font-size: 20px"
+                  (click)="openRoleDeleteDialog(role._id, i)"
+                  >delete</mat-icon
+                >
+              </span>
+            </li>
+          </ul>
+
+          <div
+            class="position-absolute top-0 end-0"
+            style="padding-top: 20px; padding-right: 20px"
+          >
+            <mat-icon
+              class="add"
+              matTooltip="Add Role"
+              matTooltipPosition="left"
+              (click)="openAddROleDialog()"
+              >add</mat-icon
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Priority</h2>
+
+          <ul
+            class="list-group"
+            *ngFor="let priority of priorities; index as i"
+          >
+            <li class="list-group-item list-group-item-info">
+              {{ priority.title }}
+              <span class="position-absolute top-0 end-0 mt-1">
+                <mat-icon
+                  style="color: green; font-size: 20px"
+                  (click)="
+                    openUpdatePriorityDialog(priority._id, priority.title)
+                  "
+                  >edit</mat-icon
+                >
+                <mat-icon
+                  style="color: red; font-size: 20px"
+                  (click)="openPriorityDeleteDialog(priority._id, i)"
+                  >delete</mat-icon
+                >
+              </span>
+            </li>
+          </ul>
+
+          <div
+            class="position-absolute top-0 end-0"
+            style="padding-top: 20px; padding-right: 20px"
+          >
+            <mat-icon class="add" (click)="openAddPriorityDialog()"
+              >add</mat-icon
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title text-center">Technology</h2>
+
+          <ul
+            class="list-group"
+            *ngFor="let technology of technologies; index as i"
+          >
+            <li class="list-group-item list-group-item-info">
+              {{ technology.title }}
+              <span class="position-absolute top-0 end-0 mt-1">
+                <mat-icon
+                  style="color: green; font-size: 20px"
+                  (click)="
+                    openUpdateTechDialog(technology._id, technology.title)
+                  "
+                  >edit</mat-icon
+                >
+                <mat-icon
+                  style="color: red; font-size: 20px"
+                  (click)="openTechDeleteDialog(technology._id, i)"
+                  >delete</mat-icon
+                >
+              </span>
+            </li>
+          </ul>
+
+          <div
+            class="position-absolute top-0 end-0"
+            style="padding-top: 20px; padding-right: 20px"
+          >
+            <mat-icon class="add" (click)="openAddTechDialog()">add</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

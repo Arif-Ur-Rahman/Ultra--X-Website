@@ -1,0 +1,42 @@
+.header{
+  /* background-color: green;   */
+  
+}
+
+.footer{
+  width: 100%;
+  background-color: white;
+}
+
+
+.leftbar{
+  background-color:rgb(240, 239, 239);   
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  scrollbar-width: none;
+  padding-top: 10px;
+}
+
+
+.leftbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+/* Media Query Start */
+
+@media (max-width:800px){
+  .leftbar{
+    display: none;
+  }
+  .main{
+    width: 100%;
+  }
+}

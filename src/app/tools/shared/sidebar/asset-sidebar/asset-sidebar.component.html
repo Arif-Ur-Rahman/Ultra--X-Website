@@ -1,0 +1,91 @@
+<mat-list-item
+    routerLink="asset/dashboard"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Dashboard"
+    matTooltipPosition="after"
+    >home</mat-icon
+    >
+    <span *ngIf="show_sidebar">Dashboard</span>
+    
+</mat-list-item>
+
+<mat-list-item
+    routerLink="asset/my-assets"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="My Assets"
+    matTooltipPosition="after"
+    >inbox</mat-icon
+    >
+    <span *ngIf="show_sidebar">My Assets</span>
+    
+</mat-list-item>
+
+
+<mat-list-item
+    routerLink="asset/inventory"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Inventory"
+    matTooltipPosition="after"
+    >widgets</mat-icon
+    >
+    <span *ngIf="show_sidebar">Available</span>
+    
+</mat-list-item>
+
+<mat-list-item
+    routerLink="asset/assigned"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Assigned"
+    matTooltipPosition="after"
+    >table_chart</mat-icon
+    >
+    <span *ngIf="show_sidebar">Assigned</span>
+    
+</mat-list-item>
+
+
+<!-- <mat-list-item
+    routerLink="asset/request"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Request"
+    matTooltipPosition="after"
+    >local_library</mat-icon
+    >
+    <span *ngIf="show_sidebar">Request</span>
+    
+</mat-list-item> -->
+
+<mat-list-item
+    routerLink="asset/request-list"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Request"
+    matTooltipPosition="after"
+    >local_library</mat-icon
+    >
+    <span *ngIf="show_sidebar">Request(Admin)</span>
+    
+</mat-list-item>

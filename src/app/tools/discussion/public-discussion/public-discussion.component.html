@@ -1,0 +1,34 @@
+<app-fab-button
+  [check_modal]="isClicked"
+  (myOutput)="raiseIssueDialogOpen($event)"
+></app-fab-button>
+<mat-tab-group>
+  <mat-tab label="Unsolved">
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+  </mat-tab>
+  <mat-tab label="Solved">
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+    <app-issue-card [check_details]="IsDetails"></app-issue-card>
+  </mat-tab>
+</mat-tab-group>

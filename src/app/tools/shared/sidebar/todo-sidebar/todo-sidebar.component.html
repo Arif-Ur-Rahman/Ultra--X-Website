@@ -1,0 +1,84 @@
+<mat-list-item
+          routerLink="ToDo/dashboard"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Dashboard"
+            matTooltipPosition="after"
+            >home</mat-icon
+          >
+          <span *ngIf="show_sidebar">Dashboard</span>
+</mat-list-item>
+
+<mat-list-item
+  routerLink="ToDo/daily-task"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Daily Task"
+    matTooltipPosition="after"
+    >list</mat-icon
+  >
+  <span *ngIf="show_sidebar">Daily</span>
+</mat-list-item>
+
+<mat-list-item
+  routerLink="ToDo/important-task"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Important"
+    matTooltipPosition="after"
+    >stars</mat-icon
+  >
+  <span *ngIf="show_sidebar">Important</span>
+</mat-list-item>
+
+<!-- <mat-list-item
+  routerLink="ToDo/project"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Project"
+    matTooltipPosition="after"
+    >task</mat-icon
+  >
+  <span *ngIf="show_sidebar">Project</span>
+</mat-list-item> -->
+
+<mat-list-item
+  routerLink="ToDo/assigned"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Group Task"
+    matTooltipPosition="after"
+    >people</mat-icon
+  >
+  <span *ngIf="show_sidebar">Assigned to Me</span>
+</mat-list-item>
+
+<!-- <mat-list-item
+  routerLink="ToDo/history"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="History"
+    matTooltipPosition="after"
+    >history</mat-icon
+  >
+  
+  <span *ngIf="show_sidebar">History</span>
+</mat-list-item> -->

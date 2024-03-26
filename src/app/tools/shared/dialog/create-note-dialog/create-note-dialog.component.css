@@ -1,0 +1,42 @@
+.dialog-Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: aqua; */
+  align-items: center;
+  height: 2.5rem;
+}
+
+.dialog-Header .avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  /* border-width: 1px red; */
+}
+
+.dialog-status {
+  display: flex;
+  align-items: center;
+  font-size: medium;
+  padding-right: 2rem;
+}
+.header-left {
+  display: flex;
+  flex-direction: row;
+}
+h1 {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  padding: 1rem;
+}
+
+.mat-button-toggle-group {
+  margin-left: 12px;
+}

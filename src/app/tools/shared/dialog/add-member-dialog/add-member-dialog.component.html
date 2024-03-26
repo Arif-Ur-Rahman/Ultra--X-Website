@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Add Member</h1>
+<form class="example-form" [formGroup]="addMemberForm" (ngSubmit) ="Create()">
+    <div mat-dialog-content>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Select Member</mat-label>
+            <mat-select name="member_id" ngModel>
+                <mat-option *ngFor="let employee of employees" [value]="employee._id">
+                  {{employee.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Select Role</mat-label>
+            <mat-select name="role_id" ngModel>
+                <mat-option *ngFor="let role of roles" [value]="role._id">
+                  {{role.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>No</button>
+    <button mat-button cdkFocusInitial>Submit</button>
+    </div>
+</form>

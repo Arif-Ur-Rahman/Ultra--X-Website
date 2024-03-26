@@ -1,0 +1,66 @@
+<mat-list-item
+  routerLink="project/dashboard"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Dashboard"
+    matTooltipPosition="after"
+    >home</mat-icon
+  >
+  <span *ngIf="show_sidebar">Dashboard</span>
+</mat-list-item>
+
+<mat-list-item
+  routerLink="project/my-projects"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="My Projects"
+    matTooltipPosition="after"
+    >work</mat-icon
+  >
+  <span *ngIf="show_sidebar">My Projects</span>
+</mat-list-item>
+
+<mat-list-item
+  routerLink="project/all-projects"
+  routerLinkActive="router-link-active"
+>
+  <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="All Projects"
+    matTooltipPosition="after"
+    >business</mat-icon
+  >
+  <span *ngIf="show_sidebar">All Projects</span>
+</mat-list-item>
+
+<!-- <mat-list-item
+          routerLink="project/schedule"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Schedule"
+            matTooltipPosition="after"
+            >list</mat-icon
+          >
+          <span *ngIf="show_sidebar">Schedule</span>
+        </mat-list-item> -->
+
+        <mat-list-item routerLink="project/settings" routerLinkActive="router-link-active">
+          <mat-icon mat-list-icon class="" matTooltip="Schedule"  matTooltipPosition="after">settings</mat-icon>
+          <span *ngIf="show_sidebar">Settings</span>
+        </mat-list-item>
+
+
+        <!-- <mat-list-item routerLink="project/tutorials" routerLinkActive="router-link-active">
+          <mat-icon mat-list-icon class="" matTooltip="Schedule" matTooltipPosition="after" >perm_media</mat-icon>
+          <span *ngIf="show_sidebar">Tutorials</span>
+        </mat-list-item> -->

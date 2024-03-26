@@ -1,0 +1,188 @@
+<div class="container">
+    <mat-form-field appearance="standard">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" matSort>
+
+            <!-- ID Column -->
+            <ng-container matColumnDef="employee_id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Employee ID </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_id.name}} </td>
+            </ng-container>
+
+            <!-- Evaluation date -->
+            <ng-container matColumnDef="evaluation_date">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Evaluation date </th>
+                <td mat-cell *matCellDef="let row"> {{ row.created_at | date: 'yyyy/MM/dd' }} </td>
+            </ng-container>
+
+            <p id="demo"></p>
+
+            <!-- Autonomous employees -->
+            <ng-container matColumnDef="employee_autonomous" >
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Autonomous employees</th>
+                <td mat-cell *matCellDef="let row">
+                    {{row.employee_autonomous.title}}
+                    <!-- {{ options[3] }} -->
+                </td>
+                <!-- <td>
+                    {{option.employee_autonomous}}
+                </td> -->
+            </ng-container>
+
+            <!-- Humble employees -->
+            <ng-container matColumnDef="employee_humble">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Humble employees </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_humble.title}} </td>
+            </ng-container>
+
+            <!-- Passoniate employees -->
+            <ng-container matColumnDef="employee_passionate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Passoniate employees </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_passionate.title}} </td>
+            </ng-container>
+
+            <!-- Honest employees -->
+            <ng-container matColumnDef="employee_honest">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Honest employees </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_honest.title}} </td>
+            </ng-container>
+
+            <!-- Relible employee -->
+            <ng-container matColumnDef="employee_relible">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Relible employee </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_relible.title}} </td>
+            </ng-container>
+
+            <!-- Creative employees -->
+            <ng-container matColumnDef="employee_creative">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Creative employees </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_creative.title}} </td>
+            </ng-container>
+
+            <!-- Confident employees -->
+            <ng-container matColumnDef="employee_confident">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Confident employees </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_confident.title}} </td>
+            </ng-container>
+
+            <!-- Employee eager -->
+            <ng-container matColumnDef="employee_eager">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Employee eager </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_eager.title}} </td>
+            </ng-container>
+
+            <!-- Employee positive -->
+            <ng-container matColumnDef="employee_positive">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Employee positive </th>
+                <td mat-cell *matCellDef="let row"> {{row.employee_positive.title}} </td>
+            </ng-container>
+
+            <!-- Part of development -->
+            <ng-container matColumnDef="developing_part">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Part of development </th>
+                <td mat-cell *matCellDef="let row"> {{row.developing_part.title}} </td>
+            </ng-container>
+
+            <!-- Spoke up in the meeting -->
+            <ng-container matColumnDef="spoke_up">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Spoke up in the meeting </th>
+                <td mat-cell *matCellDef="let row"> {{row.spoke_up.title}} </td>
+            </ng-container>
+
+            <!-- Activity vocal about ideas -->
+            <ng-container matColumnDef="activity_vocal">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Activity vocal about ideas </th>
+                <td mat-cell *matCellDef="let row"> {{row.activity_vocal.title}} </td>
+            </ng-container>
+
+            <!-- Shared important information -->
+            <ng-container matColumnDef="information_shared">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Shared important information </th>
+                <td mat-cell *matCellDef="let row"> {{row.information_shared.title}} </td>
+            </ng-container>
+
+            <!-- Share issues quickly -->
+            <ng-container matColumnDef="quick_share_issues">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Share issues quickly </th>
+                <td mat-cell *matCellDef="let row"> {{row.quick_share_issues.title}} </td>
+            </ng-container>
+
+            <!-- Helped others -->
+            <ng-container matColumnDef="helped_others">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Helped others </th>
+                <td mat-cell *matCellDef="let row"> {{row.helped_others.title}} </td>
+            </ng-container>
+
+            <!-- Skill improved  -->
+            <ng-container matColumnDef="skill_improved">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Skill improved </th>
+                <td mat-cell *matCellDef="let row"> {{row.skill_improved.title}} </td>
+            </ng-container>
+
+            <!-- Devloping on schedule -->
+            <ng-container matColumnDef="developing_on_schedule">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Devloping on schedule </th>
+                <td mat-cell *matCellDef="let row"> {{row.developing_on_schedule.title}} </td>
+            </ng-container>
+
+            <!-- Leadership ability -->
+            <ng-container matColumnDef="leadership_ability">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Leadership ability </th>
+                <td mat-cell *matCellDef="let row"> {{row.leadership_ability.title}} </td>
+            </ng-container>
+
+            <!-- Punctional employee  -->
+            <ng-container matColumnDef="punctional_employee">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Punctional employee </th>
+                <td mat-cell *matCellDef="let row"> {{row.punctional_employee.title}} </td>
+            </ng-container>
+
+            <!-- Frequently dose off -->
+            <ng-container matColumnDef="frequently_dose_off">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Frequently dose off </th>
+                <td mat-cell *matCellDef="let row"> {{row.frequently_dose_off.title}} </td>
+            </ng-container>
+
+            <!-- Hearts someone -->
+            <ng-container matColumnDef="hearts_someone">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Hearts someone </th>
+                <td mat-cell *matCellDef="let row"> {{row.hearts_someone.title}} </td>
+            </ng-container>
+
+            <!-- Unnecessary talks -->
+            <ng-container matColumnDef="unnecessary_talks">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Unnecessary talks </th>
+                <td mat-cell *matCellDef="let row"> {{row.unnecessary_talks.title}} </td>
+            </ng-container>
+
+            <!-- Unnecessary activities -->
+            <ng-container matColumnDef="unnecessary_activities">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Unnecessary activities </th>
+                <td mat-cell *matCellDef="let row"> {{row.unnecessary_activities.title}} </td>
+            </ng-container>
+
+            <!-- Keep equipment good -->
+            <ng-container matColumnDef="keep_equipment_good">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Keep equipment good </th>
+                <td mat-cell *matCellDef="let row"> {{row.keep_equipment_good.title}} </td>
+            </ng-container>
+
+            <!--  -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+            </tr>
+           
+        </mat-table>
+
+        <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users">
+        </mat-paginator> -->
+    </div>
+</div>

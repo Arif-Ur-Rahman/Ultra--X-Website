@@ -1,0 +1,180 @@
+<nav>
+    <div class="navbar">
+      <img
+        src="../../../../assets/icon/menu.png"
+        alt="cancel"
+        width="20px"
+        class="menu_icon"
+        (click)="clickEvent()"
+      />
+      <div class="logo">
+        <a href=""
+          ><img
+            src="../../../../assets/uxbd_logo_text_horizontal.svg"
+            alt="logo"
+            width="210px"
+        /></a>
+      </div>
+  
+      <!-- Conditionally redering -->
+      <div class="nav-links" [ngStyle]="{ left: leftbarOpen ? '0' : '-100%' }">
+        <div class="sidebar-logo">
+          <span
+            class="logo_name"
+            [ngStyle]="{ display: leftbarOpen ? 'block' : 'none' }"
+            ><img
+              src="../../../../assets/uxbd_logo_text_horizontal.svg"
+              alt="logo"
+              width="210px"
+          /></span>
+          <img
+            *ngIf="leftbarOpen"
+            src="../../../../assets/icon/cancel.png"
+            alt="cancel"
+            (click)="clickEvent()"
+            width="10px"
+            class="close_icon"
+            [ngStyle]="{ display: leftbarOpen ? 'block' : 'none' }"
+          />
+        </div>
+        <ul class="links">
+          <li><a href="/website/home">Home</a></li>
+  
+          <li>
+            <a href="/website/about">About Us</a>
+            <img
+              src="../../../../assets/icon/expand_more_black_24dp.svg"
+              alt="down"
+              class="arrow about_arrow"
+            />
+            <ul class="aboutus-sub-menu sub-menu">
+              <li><a href="/website/about#who_we_are">Who We Are</a></li>
+              <li>
+                <a href="/website/about#the_president_message"
+                  >The President & CEO Message</a
+                >
+              </li>
+              <li>
+                <a href="/website/about#the_vice_president_message"
+                  >The Vice-President Message</a
+                >
+              </li>
+              <li>
+                <a href="/website/about#the_cto_message">The CTO Message</a>
+              </li>
+              <li><a href="/website/about#vission">Our Vision</a></li>
+              <li><a href="/website/about#mission">Our Mission</a></li>
+              <!-- <li> <a href="/website/about#history">Our History</a></li> -->
+              <li><a href="/website/about#milestone">Our Milestone</a></li>
+              <li>
+                <a href="/website/about#environment">Working Environment</a>
+              </li>
+              <li><a href="/website/about#location">Location</a></li>
+              <li><a href="/website/about#tour">Tour</a></li>
+              <!-- <li><a href="/website/about#jp_team">Japan Team</a></li> -->
+              <!-- <li><a href="/website/about#bd_team">Bangladesh Team</a></li> -->
+              <li>
+                <a href="/website/about#Product_Quality">Product Quality</a>
+              </li>
+              <li><a href="/website/about#Services">Our Services</a></li>
+              <li><a href="/website/about#Client">Our Clients</a></li>
+            </ul>
+          </li>
+  
+          <!-- <li>
+            <a href="/website/product">Products</a>
+            <img src="../../../../assets/icon/expand_more_black_24dp.svg" alt="down" class="arrow product_arrow">
+            <ul class="product-sub-menu sub-menu">
+              <li> <a  href="/website/product#pc_solution">PC Solutions</a></li>
+              <li><a href="/website/product#web_solution">Web Solutions</a></li>
+              <li> <a href="/website/product#android_solution">Android Solutions</a> </li>
+              <li> <a href="/website/product#iot_solution">IOT Solutions</a> </li>
+              <li> <a href="/website/product#other_solution">Others</a></li>
+            </ul> 
+          </li> -->
+  
+          <li>
+            <a href="/website/news">News</a>
+            <img
+              src="../../../../assets/icon/expand_more_black_24dp.svg"
+              alt="down"
+              class="arrow news_arrow"
+            />
+            <ul class="news-sub-menu sub-menu">
+              <li><a href="/website/news#notice">Notice</a></li>
+              <li><a href="/website/news#exhibition">Exibitions</a></li>
+            </ul>
+          </li>
+          <li><a href="/website/contact">Contact</a></li>
+          <li><a href="/website/career">Career</a></li>
+          <!-- <li><a href="">Login</a></li> -->
+          <li>
+            <ng-template #content let-c="close" let-d="dismiss">
+              <div class="login">
+                <div class="center">
+                  <span
+                    type="button"
+                    (click)="d('Cross click')"
+                    class="close_btn"
+                  >
+                    <img
+                      src="./assets/icon/cancel.png"
+                      alt="Cancel"
+                      width="20px"
+                    />
+                  </span>
+  
+                  <h1>Login</h1>
+  
+                  <form #loginForm="ngForm" (ngSubmit)="getUserLoginData(loginForm.value)">
+                    <div class="txt_field">
+                      <input type="text" name="email" [(ngModel)]="email" required/>
+                      <span></span>
+                      <label>Username</label>
+                    </div>
+  
+                    <div class="txt_field">
+                      <input type="password" name="password" [(ngModel)]="password" required/>
+                      <span></span>
+                      <label>Password</label>
+                    </div>
+  
+                    <div class="mb-3" *ngIf="login_error">
+                      <span style="color: red">
+                        * Username or password does't match.
+                      </span>
+                    </div>
+  
+                    <div class="mb-3">
+                      <div class="pass">Forgot Password ?</div>
+                    </div>
+  
+                    <div *ngIf="login_error; then thenBlock; else elseBlock"></div>
+
+                    <ng-template #thenBlock>
+                      <input type="submit" value="Login" (click)="d('Cross click')" />
+                    </ng-template>
+                    <ng-template #elseBlock>
+                      <input type="submit" value="Login" (click)="d('Cross click')"/>
+                    </ng-template>
+  
+                    
+                    
+  
+                    <!--  -->
+                    <div class="signup_link">
+                      <!-- Not a member? <a href="#">Signup</a> -->
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </ng-template>
+  
+            <button (click)="open(content)" class="btn login_btn">Login</button>
+            <!-- <button class="btn login_btn">Login</button> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

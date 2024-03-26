@@ -1,0 +1,25 @@
+.mat-card {
+  max-width: 25rem;
+  max-height: 30rem;
+  background-color: rgb(176, 220, 250);
+}
+
+.mat-card .note-details {
+  margin: 2rem 1rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+  text-align: justify;
+}
+.mat-card .more-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.mat-card .importent-button {
+  position: absolute;
+  right: 3rem;
+  top: 1rem;
+}

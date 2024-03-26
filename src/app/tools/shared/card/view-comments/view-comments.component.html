@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img class="avatar" src="https://picsum.photos/200/300" />
+    </div>
+    <mat-card-title
+      >Shezan
+      <h6>10:45AM 22/02/22</h6>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <p>
+        There are several ARIA roles that communicate that a portion of the UI
+        represents some semantically meaningful whole. Depending on what the
+        content of the card means to your application, you can apply one of
+        role="group", role="region", or one of the landmark roles to the
+        element. You do not need to apply a role when using a card as a purely
+        decorative container that does not convey a meaningful grouping of
+        related content for a single subject. In these cases, the content of the
+        card should follow standard practices for document content.
+      </p>
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <!-- <mat-card-content>
+    <p>
+      There are several ARIA roles that communicate that a portion of the UI
+      represents some semantically meaningful whole. Depending on what the
+      content of the card means to your application, you can apply one of
+      role="group", role="region", or one of the landmark roles to the element.
+      You do not need to apply a role when using a card as a purely decorative
+      container that does not convey a meaningful grouping of related content
+      for a single subject. In these cases, the content of the card should
+      follow standard practices for document content.
+    </p>
+  </mat-card-content> -->
+  <mat-card-actions>
+    <div class="action-container">
+      <h3>30</h3>
+      <button mat-icon-button (click)="actionliked()">
+        <mat-icon *ngIf=liked;>done_outline</mat-icon>
+        <mat-icon class="liked-icon" *ngIf=!liked;>done_outline</mat-icon>
+      </button>
+      <h3>3</h3>
+      <button mat-icon-button (click)="openPostReplyCard()">
+        <mat-icon>comment</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+<app-post-reply *ngIf="showReply"></app-post-reply>

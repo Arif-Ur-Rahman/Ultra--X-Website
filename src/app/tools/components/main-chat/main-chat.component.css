@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+:root{
+    --grad:linear-gradient(to bottom right, #8bc34a, #ff9800);
+    --clip: polygon(52% 65%, 100% 0, 0 0, 0% 38%);
+    --shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    --c:#eaeaea;
+    --g: #74d800;
+
+}
+.top{
+    height: 100%;
+    background: #ffffff;
+    width: 100%;
+
+
+}
+.box{
+    margin-top: 30px;
+    width: 81.95rem;
+    height: 645px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    position: absolute;
+    top: 50%;
+    background: rgb(255, 255, 255);
+    left: 50%;
+    display: flex;
+    transform: translate(-50% , -50%);
+    clip: polygon(52% 65%, 100% 0, 0 0, 0% 38%);
+}
+.left{
+    width: 100rem;
+    border-right: 1px solid rgb(160, 160, 161);
+    background-color: rgb(255, 255, 255);
+}
+.right{
+    width: 1000px;
+    height: 600px;
+    background: linear-gradient(#ffffff, #a1bcdb);
+}
+.top{
+    width: 280px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: rgb(18, 6, 65); */
+    border-bottom: 1px solid rgb(128, 127, 127);
+}
+.search{
+    width: 280px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(235, 212, 212);
+}
+h2{
+    font-family: f;
+    background-color: rgb(18, 6, 65);
+    color: rgb(255, 255, 255);
+}
+.in{
+    border:1px rgb(81, 79, 79);
+    outline: none;
+    background: rgb(235, 230, 230);
+    padding: 10px 90px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+.avatar{
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: rgb(53, 52, 52);
+    margin-left: 7px;
+}
+li{
+    list-style: none;
+}
+.Employee-top{
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease;
+  height: 80px;
+  justify-content: space-between;
+  /* border-bottom: 1px solid rgb(80, 77, 77); */
+}
+.Employee{
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+    height: 80px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(80, 77, 77);
+}
+.Employee:hover{
+    background: rgb(241, 239, 239);
+    color: #000;
+}
+.img_name{
+    display: flex;
+    align-items: center;
+}
+h3{
+    font-size: 14px;
+    font-family: f;
+    margin-left: 7px;
+}
+p{
+    margin-left: 7px;
+    color: gray;
+    font-family: f;
+    font-size: 12px;
+}
+.p{
+    margin-right: 10px;
+}
+ul{
+    height: calc(600px - 100px);
+    Overflow-y: auto;
+
+}
+span{
+    color: green;
+}
+.right_top{
+    height: 85px;
+    width: 1000px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon2{
+    margin-right: 20px;
+    height: 23px;
+    width: 23px;
+    display: flex;
+}
+.mid{
+    overflow-y: auto;
+    height: 450px;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.btm{
+    height: 65px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+form{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(136, 133, 133);
+}
+.ico3, form div{
+    background: rgb(58, 76, 233);
+    padding: 7px;
+    color: rgb(58, 76, 233);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btm input{
+    width: 90%;
+    border: none;
+    height: 100%;
+    outline: none;
+    background: rgb(240, 242, 243);
+}
+.me{
+    background: rgb(58, 76, 233);
+    display: table;
+    clear: both;
+    padding: 10px;
+    max-width: 80%;
+    border-radius: 5px;
+    float: right;
+    margin: 10px;
+    color: white;
+}
+.u{
+    background: rgb(214, 216, 216);
+    display: table;
+    clear: both;
+    padding: 10px;
+    max-width: 80%;
+    border-radius: 5px;
+    float: left;
+    margin: 10px;
+}

@@ -1,0 +1,20 @@
+<!-- <div style="position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+    <mat-spinner [diameter]="100" *ngIf="showSpinner === true"></mat-spinner>
+</div> -->
+
+<app-fab-button [check_modal]="isClicked" (myOutput)="createProjectDialogOpen($event)"></app-fab-button>
+<!-- <div class="container">   
+        <div class="row">
+          <div class="col-11"> </div>
+
+          <div class="col-1 search_icon">
+            <p><mat-icon>search</mat-icon></p>
+          </div>
+        </div>
+</div> -->
+
+<app-project-card [myProject] = "1" ></app-project-card>
+
+
+
+ 

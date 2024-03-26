@@ -1,0 +1,42 @@
+.career{
+    margin-left: 16.5%;
+    padding: 100px 40px 50px 40px;
+    margin-top: 20px;
+}
+.heading{
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(67, 11, 107);
+}
+.description{
+    text-align: left;
+    margin-left: 50px;
+    font-size:large;
+    color:black;
+    margin-bottom: 50px;
+    margin-right: 600px;
+    margin-top: 30px;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.paragarab{
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 30px;
+}
+
+@media (max-width:800px){
+    .career{
+        margin-left: 0px;
+        padding: 100px 10px 50px 10px;
+
+    }
+}

@@ -1,0 +1,102 @@
+<div class="main-block">
+    <h1>New Employee Info</h1>
+    <div class="alert alert-info text-center" *ngIf="add_emp_flag">Employee Added Successfully...</div>
+    <form #addEmpForm="ngForm" (ngSubmit)="addEmpData(addEmpForm.value)">
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-user"></i></label>
+        <input type="text" name="name" ngModel placeholder="Enter your name" required> <span style="margin-left: 5px; color: red;">*</span>
+
+
+        <label id="icon" for="name"><i class="fas fa-user"></i></label>
+        <input type="text" name="name" ngModel placeholder="Employee ID">
+
+        <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="email" ngModel placeholder="Enter your email" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
+        <input type="password" name="password" ngModel placeholder="Password" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
+        <input type="password" name="conform_password" ngModel placeholder="Confirm Password" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="name"><i class="fa fa-address-book"></i></label>
+        <input type="text" name="contact_number" ngModel placeholder="+01680728065" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="name"><i class="fa fa-address-book"></i></label>
+        <input type="text" name="address" ngModel placeholder="Address" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <hr>
+        <label for="Role" style="margin-right: 5px;">Choose a Role: </label>
+
+        <select name="role" ngModel>
+          <option value="">Select One...</option>
+          <option *ngFor="let designation of designations" value={{designation._id}}>{{designation.title}}</option>
+        </select>
+        <br>
+
+        <label for="dept" style="margin-right: 15px; margin-top: 5px;">Choose Dept: </label>
+
+        <select name="department" ngModel>
+          <option value="">Select One...</option>
+          <option *ngFor="let department of departments" value={{department._id}}>{{department.title}}</option>
+        </select>
+        <hr>
+        <textarea name="description" ngModel rows="3" cols="133" placeholder="Add a description of the employee..."></textarea>
+
+        <hr>
+        <label for="image" style="margin-right: 5px;"> Upload Image: </label>
+        <input type="file" name="image_file" (change)="onFileSelected($event)" ngModel>
+        <div class="btn-block">
+            <button type="submit" [mat-dialog-close]="true">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+<!-- <div class="main-block">
+    <h1>Add New Employee</h1>
+    <div class="alert alert-info text-center" *ngIf="add_emp_flag">Employee Added Successfully...</div>
+    <form [formGroup]="addEmpForm" (submit)="addEmp()">
+        <hr>
+        <label id="icon" for="name"><i class="fas fa-user"></i></label>
+        <input type="text" formControlName="name" placeholder="Enter your name" required> <span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="email"><i class="fas fa-envelope"></i></label>
+        <input type="text" formControlName="email" placeholder="Enter your email" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="password"><i class="fas fa-unlock-alt"></i></label>
+        <input type="password" formControlName="password" placeholder="Password" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="contact_number"><i class="fa fa-address-book"></i></label>
+        <input type="text" formControlName="contect_number" placeholder="+01680728065" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <label id="icon" for="name"><i class="fa fa-address-book"></i></label>
+        <input type="text" formControlName="address" placeholder="Address" required><span style="margin-left: 5px; color: red;">*</span>
+
+        <hr>
+        <label for="Role" style="margin-right: 5px;">Choose a Role: </label>
+
+        <select formControlName="designation_id">
+          <option value="">Select One...</option>
+          <option *ngFor="let designation of designations" value={{designation._id}}>{{designation.title}}</option>
+        </select>
+        <br>
+
+        <label for="dept" style="margin-right: 15px; margin-top: 5px;">Choose Dept: </label>
+
+        <select formControlName="department_id">
+          <option value="">Select One...</option>
+          <option *ngFor="let department of departments" value={{department._id}}>{{department.title}}</option>
+        </select>
+        <hr>
+        <textarea formControlName="description" rows="3" cols="133" placeholder="Add a description of the employee..."></textarea>
+
+        <hr>
+        <label for="image" style="margin-right: 5px;"> Upload Image: </label>
+        <input type="file" (change)="getFile($event)" formControlName="employeeImage">
+
+        <div class="btn-block">
+            <button type="submit" [mat-dialog-close]="true">Submit</button>
+        </div>
+    </form>
+</div> -->

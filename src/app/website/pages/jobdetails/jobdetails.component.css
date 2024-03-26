@@ -1,0 +1,39 @@
+.jobdetails{
+    padding-left: 16.5%;
+    padding-bottom: 50px;
+    padding-top: 80px;
+}
+.heading{
+    text-decoration: solid;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(67, 11, 107);
+    border-left: ;
+    border-color: blue;
+}
+.description{
+    text-decoration: solid;
+    font-size:medium;
+    font-weight: 700;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+
+
+
+@media (max-width:800px){
+    .jobdetails{
+        padding-left: 0px;
+        
+    }
+}

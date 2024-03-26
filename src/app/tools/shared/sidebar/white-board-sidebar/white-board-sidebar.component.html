@@ -1,0 +1,27 @@
+<mat-list-item
+    routerLink="whiteBoard/dashboard"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Dashboard"
+    matTooltipPosition="after"
+    >home</mat-icon
+    >
+    <span *ngIf="show_sidebar">Dashboard</span>
+</mat-list-item>
+
+<mat-list-item
+    routerLink="whiteBoard/statusboard"
+    routerLinkActive="router-link-active"
+>
+    <mat-icon
+    mat-list-icon
+    class=""
+    matTooltip="Status Board"
+    matTooltipPosition="after"
+    >developer_board</mat-icon
+    >
+    <span *ngIf="show_sidebar">Status Board</span>
+</mat-list-item>

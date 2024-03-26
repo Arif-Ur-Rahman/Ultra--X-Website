@@ -1,0 +1,128 @@
+<app-employee-status></app-employee-status>
+
+<div class="filter-container">
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Ex. Gopal"
+      #input
+    />
+  </mat-form-field>
+</div>
+
+<div class="example-container mat-elevation-z8">
+  <div class="mat-elevation-z8">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      matSort
+      (matSortChange)="announceSortChange($event)"
+      class="mat-elevation-z8"
+    >
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Number Column -->
+
+      <ng-container matColumnDef="name">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          sortActionDescription="Sort by name"
+        >
+          Employee
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <!-- Time Column -->
+      <ng-container matColumnDef="status">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by status"
+        >
+          Status
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.status }}
+        </td>
+      </ng-container>
+      <!-- Time Column -->
+      <ng-container matColumnDef="start_time">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by start_time"
+        >
+          Start Time
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.start_time }}
+        </td>
+      </ng-container>
+      <!-- Time Column -->
+      <ng-container matColumnDef="end_time">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by end_time"
+        >
+          End Time
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.end_time }}
+        </td>
+      </ng-container>
+      <!-- Time Column -->
+      <ng-container matColumnDef="note">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by note"
+        >
+          Note
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.note }}
+        </td>
+      </ng-container>
+
+      <!-- Action Start -->
+      <ng-container matColumnDef="actions">
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+          sortActionDescription="Sort by actions"
+        >
+          Action
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <a mat-icon-button>
+            <mat-icon>edit</mat-icon>
+          </a>
+          <a mat-icon-button>
+            <mat-icon color="warn">delete</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+      <!-- Action End -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+      [pageSizeOptions]="[10, 20]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+    >
+    </mat-paginator>
+  </div>
+</div>

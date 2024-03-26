@@ -1,0 +1,25 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { EmployeeEvaluationComponent } from './employee-evaluation.component';
+
+describe('EmployeeEvaluationComponent', () => {
+  let component: EmployeeEvaluationComponent;
+  let fixture: ComponentFixture<EmployeeEvaluationComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ EmployeeEvaluationComponent ]
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(EmployeeEvaluationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

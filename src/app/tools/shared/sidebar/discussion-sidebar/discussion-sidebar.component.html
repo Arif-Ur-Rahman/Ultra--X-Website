@@ -1,0 +1,41 @@
+<mat-list-item
+          routerLink="discussion/dashboard"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Dashboard"
+            matTooltipPosition="after"
+            >home</mat-icon
+          >
+          <span *ngIf="show_sidebar">Dashboard</span>
+        </mat-list-item>
+
+        <mat-list-item
+          routerLink="discussion/public-discussion"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Public Discussion"
+            matTooltipPosition="after"
+            >public</mat-icon
+          >
+          <span *ngIf="show_sidebar">Public Discussion</span>
+        </mat-list-item>
+
+        <mat-list-item
+          routerLink="discussion/gruop-discussion"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Gruop Discussion"
+            matTooltipPosition="after"
+            >group</mat-icon
+          >
+          <span *ngIf="show_sidebar">Gruop Discussion</span>
+        </mat-list-item>

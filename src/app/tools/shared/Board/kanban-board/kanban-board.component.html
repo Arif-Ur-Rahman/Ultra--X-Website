@@ -1,0 +1,55 @@
+<div class="container-fluid">
+
+    <mat-toolbar class="shadow justify-content-between px-5 mb-4" >
+        <div>
+            <span class="mat-h2">Test Board</span>
+        </div>
+        <div>
+
+            <app-dialog (emitText) = "addColumn($event)" question="Add New Column">
+                <button mat-raised-button color="primary">New Column</button>
+            </app-dialog>
+
+        </div>
+    </mat-toolbar>
+
+
+    
+    <div cdkDropListGroup class="row">
+        <div class="col-sm-6 col-md-4 col-lg-2 mb-3" *ngFor = "let column of kanbanBoardService.getBoard$() | async">
+            <div class="d-flex justify-content-between align-items-center p-2 shadow-sm column-header">
+                <h2 class="m-0" style="text-align: center;">{{column.title}}</h2>
+                <button mat-icon-button class="icon-delete" (click) = "onDeleteColumn(column.id)">
+                    <mat-icon style="font-size: 20px; color: red;">delete</mat-icon>
+                </button>
+            </div>
+
+            <app-dialog (emitText) = "onAddCard($event, column.id)" [question]="'Add new Task in ' + column.title + ' column'">
+                <button mat-raised-button class="w-100 mb-1 btn-add">+</button>
+            </app-dialog>
+
+            <app-color-panel (emitColor) = "onColorChange($event, column.id)"></app-color-panel>
+
+            <div cdkDropList [cdkDropListData]="column.list" class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-container">
+                    <div cdkDrag class="example-box" [ngStyle]="{background: column.color}" *ngFor ="let item of column.list">
+                        <app-board-item 
+                            [item] = "item" 
+                            (emitText) ="onAddComment($event, column.id)"
+                            (emitCardItem) ="onChangeLike($event, column.id)"
+                            (emitDislike) ="onChangDislike($event, column.id)"
+                            (emitDeleteCard) = "onDeleteCard($event, column.id)"
+                        >
+                            <div *ngFor="let comment of item.comments">
+                                <app-board-comment [comment]="comment" 
+                                    (emitComment) = "onDeleteComment($event, column.id, item)">
+                                </app-board-comment>
+                            </div>
+                            
+                        </app-board-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,458 @@
+<form class="form-container" [formGroup]="userprofileForm" (ngSubmit)="onSubmit()" novalidate>
+    <mat-card class="card">
+        <mat-card-header class="card-title">
+            <mat-card-title>Employee Evaluation</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="evaluation-basic-info">
+                <!-- <div class=""> -->
+                <!-- <h4 class="evaluation-question">Select employees name: </h4> -->
+                <!-- <mat-form-field appearance="fill">
+                    <mat-label>Select Evaluator name here</mat-label>
+                    <mat-select formControlName="employee_id">
+                        <mat-option class="dropdown-option" *ngFor="let employee of employees" [value]="employee._id">
+                            {{employee.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> -->
+                <!-- </div> -->
+
+                <!-- <div class=""> -->
+                <!-- <h4 class="evaluation-question">Select employees name: </h4> -->
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Employee name here</mat-label>
+                    <mat-select formControlName="employee_id">
+                        <mat-option class="dropdown-option" *ngFor="let employee of employees" [value]="employee._id">
+                            {{employee.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!-- </div> -->
+
+                <!-- <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> -->
+            </div>
+
+
+            <div class="question-section">
+                <h2>How would you rate his skills as a good/Good employee?</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Autonomous- Does he has the ability to work on tasks by
+                        himself with very little help?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group id="1" color="primary" formControlName="employee_autonomous" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <!-- for columnwise design -->
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <mat-radio-group color="primary" formControlName="employeeAutonomous" class="margin-left">
+                        <div class="radio-option">
+                            <p class="question">Autonomous- Have the ability to work on tasks by themselves with very little help?</p>
+                            <mat-radio-button value="excellent"> </mat-radio-button>
+                            <mat-radio-button value="very-good"> </mat-radio-button>
+                            <mat-radio-button value="neutral"> </mat-radio-button>
+                            <mat-radio-button value="poor"> </mat-radio-button>
+                            <mat-radio-button value="very-poor"> </mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div> -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Humble- Does he stay grounded and not arrogant?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group id="2" color="primary" formControlName="employee_humble" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Passionate- Have an incredible amount of passion for what
+                        they are doing?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group id="3" color="primary" formControlName="employee_passionate" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Honest- Does he always speaks the truth?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group color="primary" formControlName="employee_honest" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Relible- Does he always reliable?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group color="primary" formControlName="employee_relible" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Creative- Is he creative?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group color="primary" formControlName="employee_creative" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Confident- Is he Confident about his work?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group color="primary" formControlName="employee_confident" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Eager- Is he hungry to take challenge, waiting to learn new
+                        skills?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group color="primary" formControlName="employee_eager" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Positive- Is he always positive mind?
+                    </mat-label>
+                    <br><br>
+                    <mat-radio-group color="primary" formControlName="employee_positive" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="question-section">
+                <h2>How would you rate his working attitude in project?</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Was he developing as part of a team?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="developing_part" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Was he spoke up at project meetings?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="spoke_up" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Was he actively vocal about his ideas?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="activity_vocal" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Was he shared information frequently with other team members?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="information_shared" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">When issues arose, they were quick to share information with
+                        other team members?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="quick_share_issues" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Does he helped other team members?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="helped_others" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Is he improved his skills?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="skill_improved" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Was he developing on schedule?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="developing_on_schedule" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">What do you think, is he has the ability for project
+                        leadership?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="leadership_ability" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="question-section">
+                <h2>How would you rate his working attitude in project?</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Is he punctual?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="punctional_employee" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question">Is he frequently doze off?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="frequently_dose_off" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question"> Does he hurts someone?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="hearts_someone" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question"> Does he talk about non-work-related matters?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="unnecessary_talks" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question"> Does he use PC or smartphone for non-work related
+                        activities?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="unnecessary_activities" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-label class="evaluation-question"> Does he always be neat and clean including his teeth,
+                        fingernails, face, hair and shoes?
+                    </mat-label>
+                    <mat-radio-group color="primary" formControlName="keep_equipment_good" class="margin-left">
+                        <div class="radio-option">
+                            <mat-radio-button [value]="all_option[1]._id">1 (Very Good)</mat-radio-button>
+                            <mat-radio-button [value]="all_option[2]._id">2</mat-radio-button>
+                            <mat-radio-button [value]="all_option[3]._id">3</mat-radio-button>
+                            <mat-radio-button [value]="all_option[0]._id">4 (Very Bad)</mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button (click)="saveForm()" mat-raised-button color="primary">Save</button>
+        </mat-card-actions>
+
+    </mat-card>
+</form>

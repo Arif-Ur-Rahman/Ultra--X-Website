@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Update {{title}}</h1>
+<form class="example-form" [formGroup]="updateForm" (ngSubmit) ="Update()">
+    <div mat-dialog-content>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder={{old_title}} formControlName="title"/>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>No</button>
+    <button mat-button cdkFocusInitial>Submit</button>
+    </div>
+</form>

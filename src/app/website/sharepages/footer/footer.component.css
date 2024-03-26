@@ -1,0 +1,21 @@
+.custom{
+    margin-left: 16.5%;
+    background-color: rgb(202, 189, 196);
+    padding-top: 50px;
+}
+
+
+a{
+    text-decoration: none;
+    color:rgb(199, 23, 47);
+}
+
+
+/* Media Query Start */
+
+@media (max-width:800px){
+    .custom{
+        margin: 0px 0px;
+    }
+    
+}

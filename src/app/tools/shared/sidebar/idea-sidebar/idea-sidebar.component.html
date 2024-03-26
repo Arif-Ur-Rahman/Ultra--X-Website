@@ -1,0 +1,41 @@
+<mat-list-item
+          routerLink="idea/dashboard"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Dashboard"
+            matTooltipPosition="after"
+            >home</mat-icon
+          >
+          <span *ngIf="show_sidebar">Dashboard</span>
+        </mat-list-item>
+
+        <mat-list-item
+          routerLink="idea/idea-panel"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="Idea Panel"
+            matTooltipPosition="after"
+            >list</mat-icon
+          >
+          <span *ngIf="show_sidebar">Idea Panel</span>
+        </mat-list-item>
+
+        <mat-list-item
+          routerLink="idea/my-ideas"
+          routerLinkActive="router-link-active"
+        >
+          <mat-icon
+            mat-list-icon
+            class=""
+            matTooltip="My Ideas"
+            matTooltipPosition="after"
+            >highlight</mat-icon
+          >
+          <span *ngIf="show_sidebar">My Ideas</span>
+        </mat-list-item>

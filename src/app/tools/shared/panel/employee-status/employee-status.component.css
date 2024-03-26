@@ -1,0 +1,34 @@
+.container {
+  background-color: rgb(29, 144, 179);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: none;
+  max-width: 100rem;
+}
+.container .summary {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.container .summary .status {
+  margin: 5px;
+  width: auto;
+  display: flex;
+  flex-grow: 5;
+  flex-direction: column;
+}
+.container .summary .status .status-title {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .summary .status .status-counting {
+  background-color: rgb(148, 188, 201);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

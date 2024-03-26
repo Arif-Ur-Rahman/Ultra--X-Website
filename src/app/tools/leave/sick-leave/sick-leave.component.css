@@ -1,0 +1,15 @@
+.header{
+    background-color: rgb(128, 175, 219);;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.sick_leave_form{
+    background-color: rgb(238, 240, 248);
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.rules{
+    padding-left: 100px;
+}

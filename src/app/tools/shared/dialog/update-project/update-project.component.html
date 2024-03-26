@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>Update Project</h1>
+<div mat-dialog-content>
+    <form class="project-form" #updateProjectForm="ngForm" (ngSubmit)="updateProject(updateProjectForm.value)">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Project Title</label>
+            <input type="text" class="form-control"  placeholder="{{project.title}}" name="project_title" value="project_title" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Project Version</label>
+            <input type="text" class="form-control"  placeholder="{{project.current_version}}" name="project_version" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Git Link</label>
+            <input type="text" class="form-control" placeholder="{{project.git_link}}" name="git_link" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Schedule Link</label>
+            <input type="text" class="form-control" placeholder="{{project.schedule_link}}" name="schedule_link" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Project Start Date : {{project.start_date}}</label>
+            <input type="date" class="form-control" placeholder="{{project.start_date}}" name="start_date" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Project End Date : {{project.end_date}}</label>
+            <input type="date" class="form-control" placeholder="{{project.end_date}}" name="end_date" ngModel>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> Technology </label>
+            <!-- <select class="form-select"  name="technology" ngModel>
+              <option *ngFor="let technology of technologies" value="{{technology._id}}" selected> {{technology.title}}</option>
+            </select> -->
+            <ng-multiselect-dropdown
+                [settings]="dropdownSettings"
+                [data]="dropdownList" >
+            </ng-multiselect-dropdown>
+        </div>
+        <!-- <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Schedule File</label>
+            <input type="file" class="form-control">
+        </div> -->
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> Project Prioroty </label>
+            <select class="form-select" name="priority" ngModel>
+                <option *ngFor="let priority of priorities" value="{{priority._id}}" selected> {{priority.title}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> Project Status </label>
+            <select class="form-select" id="inputGroupSelect01" name="status" ngModel>
+                <option *ngFor="let status of statuses" value="{{status._id}}" selected> {{status.title}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Summary</label>
+            <textarea class="form-control"  rows="3" placeholder="{{project.description}}" name="description" ngModel></textarea>
+        </div>
+
+        <div mat-dialog-actions align="end">
+            <button mat-button [mat-dialog-close]="true">No Thanks</button>
+            <button mat-button type="submit" [mat-dialog-close]="true" cdkFocusInitial>Update</button>
+        </div>
+        
+    </form>
+</div>

@@ -1,0 +1,54 @@
+<mat-list-item routerLink="notes/dashboard">
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Dashboard"
+      matTooltipPosition="after"
+      >home</mat-icon
+    >
+    <span *ngIf="show_sidebar">Dashboard</span>
+  </mat-list-item>
+
+  <mat-list-item routerLink="notes/note">
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Note"
+      matTooltipPosition="after"
+      >event</mat-icon
+    >
+    <span *ngIf="show_sidebar">Note</span>
+  </mat-list-item>
+
+  <!-- <mat-list-item routerLink="notes/remainder">
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Reminder"
+      matTooltipPosition="after"
+      >access_alarm</mat-icon
+    >
+    <span *ngIf="show_sidebar">Reminder</span>
+  </mat-list-item> -->
+
+  <mat-list-item routerLink="notes/archive">
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Archive"
+      matTooltipPosition="after"
+      >archive</mat-icon
+    >
+    <span *ngIf="show_sidebar">Archive</span>
+  </mat-list-item>
+
+  <mat-list-item routerLink="notes/bin">
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Bin"
+      matTooltipPosition="after"
+      >delete</mat-icon
+    >
+    <span *ngIf="show_sidebar">Bin</span>
+  </mat-list-item>

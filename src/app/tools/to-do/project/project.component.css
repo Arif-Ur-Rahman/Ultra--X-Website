@@ -1,0 +1,18 @@
+.header{
+    background-color: rgb(128, 175, 219);
+    padding-left: 10px;
+    text-align: center;
+    font-weight:500;
+}
+
+.add_task{
+   
+    padding-top: 3px;
+    
+    margin-bottom: 20px;
+}
+
+.project h2{
+    background-color: rgb(180, 112, 201);
+    padding-left: 10px;
+}

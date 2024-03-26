@@ -1,0 +1,133 @@
+.news{
+    margin-left: 16.5%;
+    background-color: white;
+    padding: 0 70px;
+    margin-top: 50px;
+    
+}
+
+.product1{
+    width: 350px;
+    height: 500px;
+    background-color: rgb(230, 208, 211) ;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+}
+
+.heading{
+    font-size:30px;
+    font-weight: bold;
+    
+    color: rgb(12, 11, 11);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.news_button{
+    width: 50px ;
+    height: 30px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 50px;
+    /* margin-top: 50px; */
+  }
+  .card-title{
+      text-align: center;
+  }
+  .card-text{
+      text-align: justify;
+  }
+  .card-body h1{
+      text-align: center;
+      color: crimson;
+  }
+  .card-body .btn{
+      background-color: rgb(243, 240, 240);
+      color: black;
+      border: none;
+      margin-bottom: 0px;
+      align-items: center;
+      width: 100%;
+  }
+  .card-body .btn:hover{
+      background-color: crimson;
+      color: white;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+      
+    box-shadow: 0 16px 32px 0 rgba(36, 25, 25, 0.2);
+  }
+
+  .row{
+      padding-top: 20px;
+  }
+
+  .webb{
+      background-color: rgb(240, 255, 240);
+      color: black;
+  }  
+  
+.PC{
+    background-color: rgb(255, 226, 226);
+    color: black;
+}
+.android{
+    background-color: rgb(243, 226, 243);
+    color: black;
+}
+.iot{
+    background-color: rgb(178, 208, 224);
+    color: black;
+}
+.edit{
+    margin-top: 50px;
+    color: black;
+    border-radius: 10px;
+    background-color: rgb(221, 201, 201);
+    box-sizing: border-box;
+    border: crimson;
+
+}
+
+
+
+ul, li {
+    /* list-style-type: none; */
+}
+
+.seminar{
+    /* padding-left: 50px; */
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.notice{
+    margin-left: 5px;
+}
+
+
+
+@media (max-width:800px){
+    .news{
+        margin-left: 0px;
+        padding: 0px 25px;
+        margin-top: 50px;
+    }
+
+    .seminar{
+        margin-left: 0px;
+        padding: 0px 0px;
+        margin-top: 50px;
+    }
+
+    .notice{
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,99 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6" *ngFor="let project of projects; index as i">
+            <mat-card class="mb-2">
+               
+                <mat-card-header>
+                    <div mat-card-avatar>
+                        <img src="../../../../../assets/user.png" alt="" width="50" height="50">
+                    </div>
+                    <mat-card-title>{{project.title}} </mat-card-title>
+                    <mat-card-subtitle>
+                        <h5>Version:{{project.current_version}}  </h5>
+                    </mat-card-subtitle>
+                    <div class="status">
+                        <h5>Status: {{project.current_status.title}}  </h5>
+                    </div>
+                    <div class="more-button">
+                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                        </button>
+                    </div>
+    
+                    <mat-menu #menu="matMenu" xPosition="before">
+                        <button mat-menu-item (click)="openEditDialog(project._id, i)">
+                            <mat-icon>edit</mat-icon>
+                            <span>Edit</span>
+                        </button>
+                        <button mat-menu-item (click)="openDeleteDialog(project._id, i)">
+                        <mat-icon>delete</mat-icon>
+                        <span>Delete</span>
+                        </button>
+    
+                        <button mat-menu-item (click)="openAddMemberDialog(project._id)">
+                            <mat-icon>add</mat-icon>
+                            <span>Add Member</span>
+                        </button>
+                    </mat-menu>
+                </mat-card-header>
+    
+                <mat-card-content>
+                    <div class="project-details">
+                        <p style="text-align: justify;">{{project.description}}</p>
+                    </div>
+    
+                    <div class="member-container">
+                        <h3>Members:</h3>
+                        <div class="member-list">
+                            <div *ngFor="let member of project.assign_members" mat-card-avatar matTooltip="Gopal san" matTooltipPosition="above">
+                                <img class="avatar" src="../../../../../assets/user.png" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                </mat-card-content>
+                
+                <mat-card-actions>
+                    <button mat-icon-button  matTooltip="Grand Chart" matTooltipPosition="below">
+                        <mat-icon>card_membership</mat-icon>
+                    </button>
+                
+    
+                    <a mat-icon-button href={{project.schedule_link}} matTooltip="Schedule" matTooltipPosition="below">
+                        <mat-icon>schedule</mat-icon>
+                    </a>
+                    
+                    <button mat-icon-button routerLink='/tools/project/single-board-view/{{project._id}}' matTooltip="Board" matTooltipPosition="below">
+                    <mat-icon>developer_board</mat-icon>
+                    </button>
+    
+                    <button mat-icon-button matTooltip="Github" matTooltipPosition="below">
+                    <a href={{project.git_link}}>
+                        <img
+                        src="https://img.icons8.com/material-outlined/24/000000/github.png"
+                        />
+                    </a>
+                    </button>
+    
+                    <button mat-icon-button matTooltip="Details" matTooltipPosition="below" (click)="openViewDialog(project._id)">
+                    <mat-icon>details</mat-icon>
+                    </button>
+    
+                    <button mat-icon-button matTooltip="Road Map" matTooltipPosition="below">
+                        <mat-icon>event_seat</mat-icon>
+                    </button>
+    
+                </mat-card-actions>
+    
+                <mat-card-footer>
+                    <mat-progress-bar [color]="color" [mode]="mode" [value]="value" [bufferValue]="bufferValue">
+                    </mat-progress-bar>
+                </mat-card-footer>
+           
+        </mat-card>
+        </div>
+            
+        
+        
+    </div>
+</div>

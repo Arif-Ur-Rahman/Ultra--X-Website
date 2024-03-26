@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Share/Edit An Idea</h1>
+<div mat-dialog-content>
+  <form class="project-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Idea Title</mat-label>
+      <input matInput value="Nothing to say" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Idea Details</mat-label>
+      <input
+        matInput
+        value=" There are several ARIA roles that communicate that a portion of the UI
+      represents some semantically meaningful whole. Depending on what the
+      content of the card means to your application, you can apply one of
+      or one of the landmark roles to the element.
+      You do not need to apply a role when using a card as a purely decorative
+      container that does not convey a meaningful grouping of related content
+      for a single subject. In these cases, the content of the card should
+      follow standard practices for document content."
+      />
+    </mat-form-field>
+
+    <p>
+      Status:
+      <mat-button-toggle-group #group="matButtonToggleGroup" value="pending">
+        <mat-button-toggle value="pending">Pending</mat-button-toggle>
+        <mat-button-toggle value="approved">Approved</mat-button-toggle>
+        <mat-button-toggle value="rejected">Rejected</mat-button-toggle>
+      </mat-button-toggle-group>
+    </p>
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true">No Thanks</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>
+    Save Changes
+  </button>
+</div>

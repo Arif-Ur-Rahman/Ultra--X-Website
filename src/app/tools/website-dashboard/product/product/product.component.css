@@ -1,0 +1,31 @@
+/* table {
+  width: 100%;
+  overflow: auto;
+}
+
+th{
+  background-color: rgb(59, 133, 202);
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+
+}
+
+td{
+  background-color: rgb(245, 243, 240);
+}
+
+.mat-sort-header-container {
+  align-items: center;
+} */
+
+
+th{
+  text-align: center;
+  background-color: rgb(59, 133, 202);
+  color: #fff;
+}
+
+td{
+  text-align: center;
+}

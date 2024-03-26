@@ -1,0 +1,28 @@
+<div class="dialog-Header">
+    <div class="header-left">
+        <div mat-card-avatar>
+            <img class="avatar" src="https://picsum.photos/200/300" />
+        </div>
+        <h1>{{projects.title}}</h1>
+    </div>
+
+    <div class="dialog-status">{{projects.current_status_id.title}}</div>
+</div>
+<mat-card-subtitle>
+    <h5>Version: {{projects.current_version}}</h5>
+</mat-card-subtitle>
+<div class="member-container">
+    <h3>Members:</h3>
+    <div class="member-list">
+        <div *ngFor="let member of projects.assign_members" mat-card-avatar matTooltip="Gopal" matTooltipPosition="above">
+            <img class="avatar " src="https://picsum.photos/200/300 " />
+        </div>
+    </div>
+</div>
+<mat-dialog-content class="mat-typography ">
+    <h3>Summary</h3>
+    <p>{{projects.description}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end ">
+    <button mat-button [mat-dialog-close]="true " cdkFocusInitial>Close</button>
+</mat-dialog-actions>

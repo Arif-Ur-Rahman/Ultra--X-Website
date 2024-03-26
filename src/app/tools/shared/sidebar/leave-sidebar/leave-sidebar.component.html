@@ -1,0 +1,56 @@
+<mat-list-item
+routerLink="/tools/leave/dashboard"
+routerLinkActive="router-link-active"
+>
+<mat-icon
+  mat-list-icon
+  class=""
+  matTooltip="Dashboard"
+  matTooltipPosition="after"
+  >home</mat-icon
+>
+<span *ngIf="show_sidebar">Dashboard</span>
+</mat-list-item>
+
+<mat-list-item
+  routerLink="/tools/leave/sick-leave"
+  routerLinkActive="router-link-active"
+>
+<mat-icon
+  mat-list-icon
+  class=""
+  matTooltip="Sick Leave"
+  matTooltipPosition="after"
+  >invert_colors</mat-icon
+>
+<span *ngIf="show_sidebar">Sick Leave</span>
+</mat-list-item>
+
+<mat-list-item
+routerLink="/tools/leave/casual-leave"
+routerLinkActive="router-link-active"
+>
+<mat-icon
+  mat-list-icon
+  class=""
+  matTooltip="Casual Leave"
+  matTooltipPosition="after"
+  >waves</mat-icon
+>
+<span *ngIf="show_sidebar">Casual Leave</span>
+</mat-list-item>
+
+<mat-list-item
+routerLink="leave/leave-history"
+routerLinkActive="router-link-active"
+>
+<mat-icon
+  mat-list-icon
+  class=""
+  matTooltip="Leave History"
+  matTooltipPosition="after"
+  >storage</mat-icon
+>
+<span *ngIf="show_sidebar">Leave History</span>
+</mat-list-item>
+

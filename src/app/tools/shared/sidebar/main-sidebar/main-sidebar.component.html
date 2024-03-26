@@ -1,0 +1,80 @@
+<mat-list-item routerLink="home" routerLinkActive="router-link-active">
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Main Dashboard Home"
+      matTooltipPosition="after"
+      >home</mat-icon
+    >
+    <span *ngIf="show_sidebar">Home</span>
+  </mat-list-item>
+
+  <mat-list-item
+    routerLink="main-to-do-list"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="To Do List"
+      matTooltipPosition="after"
+      >supervisor_account</mat-icon
+    >
+    <span *ngIf="show_sidebar">TO Do List</span>
+  </mat-list-item>
+
+  <mat-list-item
+    routerLink="main-project"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Project"
+      matTooltipPosition="after"
+      >bug_report</mat-icon
+    >
+    <span *ngIf="show_sidebar">Project</span>
+  </mat-list-item>
+
+  <mat-list-item
+    routerLink="main-calendar"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Calendar"
+      matTooltipPosition="after"
+      >card_travel</mat-icon
+    >
+    <span *ngIf="show_sidebar">Calendar</span>
+  </mat-list-item>
+
+  <mat-list-item
+    routerLink="main-chat"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Chat"
+      matTooltipPosition="after"
+      >chat</mat-icon
+    >
+    <span *ngIf="show_sidebar">Chat</span>
+  </mat-list-item>
+
+  <mat-list-item
+    routerLink="main-email"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon
+      mat-list-icon
+      class=""
+      matTooltip="Email"
+      matTooltipPosition="after"
+      >email</mat-icon
+    >
+    <span *ngIf="show_sidebar">Email</span>
+  </mat-list-item>

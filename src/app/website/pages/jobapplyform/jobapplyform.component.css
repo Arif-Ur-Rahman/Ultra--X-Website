@@ -1,0 +1,30 @@
+.jobapplyform{
+    margin-top: 50px;
+    padding-left: 320px;
+    padding-top: 70px;
+
+    /* padding: 40px 50px 50px 500px; */
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+.input-group-prepend{
+    width: 230px;
+}
+
+.col-2 button{
+    align-items: center;
+}
+
+
+/* Media Query Start */
+
+@media (max-width:800px){
+    .jobapplyform{
+        padding-left: 0px;
+    }
+}

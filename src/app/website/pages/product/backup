@@ -1,0 +1,196 @@
+<div class="all_product">
+    <section id="pc_solution">
+        <h2 class="text-center heading p-3 text-danger">PC SOLUTION</h2>
+        <div class="row product">
+            <div class="row d-flex justify-content-center" style="float: left;">
+               
+                <div class="card" style="width: 20rem; margin-right: 15px; float: left;">
+                    <img src="./assets/PCSolutions1.jpg" alt="Avatar" style="width: 100%" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>Cristal Display</b></h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-info">Show More</button>
+                      </div>
+                    </div>
+                </div>
+    
+                <div class="card" style="width: 20rem; margin-left: 48px; margin-right: 15px; float: left;">
+                    <img src="./assets/PCSolutions2.jpg" alt="Avatar" style="width: 100%" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><b>AI Keyboard</b></h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn">Show More</button>
+                        </div>
+                    </div>
+                </div>
+    
+                  <div class="card" style="width: 20rem; margin-left: 48px; float: left;">
+                    <img src="./assets/webdev.jpg" alt="Avatar" style="width: 100%" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><b>Multi Tasking System</b></h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-flex justify-content-center">
+                            <button type="button" class="btn">Show More</button>
+                        </div>
+                    </div>
+                  </div>  
+            </div>
+        </div>
+        <div class="row product">
+            <div class="row d-flex justify-content-center" style="float: left;">
+               
+                <div class="card" style="width: 20rem; margin-right: 15px; float: left;">
+                    <img src="./assets/PCSolutions4.jpg" alt="Avatar" style="width: 100%" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title"><b>Smart Desktop</b></h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-info">Show More</button>
+                      </div>
+                    </div>
+                </div>
+    
+                <div class="card" style="width: 20rem; margin-left: 48px; margin-right: 15px; float: left;">
+                    <img src="./assets/iot1.jfif" alt="Avatar" style="width: 100%" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><b>iOT Development</b></h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn">Show More</button>
+                        </div>
+                    </div>
+                </div>
+    
+                  <div class="card" style="width: 20rem; margin-left: 48px; float: left;">
+                    <img src="./assets/webdev.jpg" alt="Avatar" style="width: 100%" height="250px" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title"><b>Web Development</b></h3>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-flex justify-content-center">
+                            <button type="button" class="btn">Show More</button>
+                        </div>
+                    </div>
+                  </div>  
+            </div>
+        </div>
+    </section>
+
+    <section id="web_solution">
+    <h2 class="text-center heading p-3 text-danger">WEB SOLUTION</h2>
+    <div class="product mb-3">
+        <div class="wrapper mb-3">
+            <!-- <h1>Products</h1>   -->
+            <div class="card">
+                <img src="./assets/web1.jpg" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./assets/web2.jpg" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./assets/webb3.jpg" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <span class="text-center"> <a href="#" class="btn btn-info mb-3">Show More</a> </span>
+    </div>
+    </section>
+
+    <section id="android_solution">
+    <h2 class="text-center heading p-3 text-danger">ANDROID SOLUTION</h2>
+    <div class="product mb-3">
+        <div class="wrapper mb-3">
+            <!-- <h1>Products</h1>   -->
+            <div class="card">
+                <img src="./assets/Android.jpg" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./assets/android2.jpg" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./assets/android3.png" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <span class="text-center"> <a href="#" class="btn btn-info mb-3">Show More</a> </span>
+    </div>
+    </section>
+
+    <section id="iot_solution">
+    <h2 class="text-center heading p-3 text-danger">IOT SOLUTION</h2>
+    <div class="product mb-3">
+        <div class="wrapper mb-3">
+            <!-- <h1>Products</h1>   -->
+            <div class="card">
+                <img src="./assets/iot1.jfif" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./assets/iot2.jpg" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        
+            <div class="card">
+                <img src="./assets/iot3.png" alt="product image">
+                <div class="info">
+                    <h1>Heading</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas!</p>
+                    <a routerLink="/website/productdetails" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <span class="text-center"> <a href="#" class="btn btn-info mb-3">Show More</a> </span>
+    </div>
+    </section>
+</div>

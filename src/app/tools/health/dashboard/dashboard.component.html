@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+      <!-- <h2 style="background-color: aqua; text-align: center;">Welcome to Main Dashboard</h2> -->
+  
+      <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(211, 43, 147); text-align: center;">Bar Chart</h2>
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [type]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+        </div>
+        
+      </div>
+  
+  
+      <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(18, 122, 174); text-align: center;">Pie Chart</h2>
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+                  [data]="pieChartData"
+                  [type]="pieChartType"
+                  [options]="pieChartOptions"
+                  [plugins]="pieChartPlugins">
+          </canvas>
+        </div>
+      </div>
+  
+    
+      
+    </div>
+  
+    <!-- <div class="row" style="padding-top: 100px; padding-bottom: 100px;">
+      <div class="col-6">
+        <h2 style="background-color: rgb(255, 94, 0); text-align: center;">Line Chart</h2>
+          <canvas baseChart width="400" height="400"
+                      [data]="lineChartData"
+                      [options]="lineChartOptions"
+                      [type]="lineChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)">
+          </canvas>
+  
+          <table class="table table-responsive table-condensed">
+            <tr>
+              <th *ngFor="let label of lineChartData.labels">{{label}}</th>
+            </tr>
+            <tr *ngFor="let d of lineChartData.datasets; let i=index" [class]="'line-'+i">
+              <td *ngFor="let label of lineChartData.labels; let j=index">{{d && d.data[j]}}</td>
+            </tr>
+          </table>
+  
+  
+      </div>
+      
+      <div class="col-6">
+        <h2 style="background-color: rgb(255, 166, 0); text-align: center;">Project Chart</h2>
+        <canvas baseChart width="400" height="400"
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [type]="barChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+        </canvas>
+       
+      </div>
+  
+  
+  
+  
+    </div> -->
+  
+  
+  </div>

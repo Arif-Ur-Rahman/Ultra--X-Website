@@ -1,0 +1,428 @@
+
+<app-fab-button [check_modal] = "isClicked" (myOutput)="GetChildData($event)"></app-fab-button>
+
+<div class="container-fluid">
+
+   <!-- For Add modal -->
+  
+   
+    <ng-template #add let-modal>
+
+      <div class="modal-header" style="background-color: hsl(33, 41%, 95%);">
+        <h4  style="padding-left: 35%; font-size: 20px;">Add Seminar</h4>
+      </div>
+
+      
+      <div class="modal-body" style="background-color: rgb(243, 239, 234);">
+
+        <form>
+
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlInput1" class="mb-2">Seminar Title <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seminar Title">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlInput1" class="mb-2">Seminar ID <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seminar ID">
+          </div>
+
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlTextarea1" class="mb-2">Details <span style="color: red;">*</span></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Seminar Details"></textarea>
+          </div>
+
+          
+
+          <div class="form-group mt-3">
+            <label for="exampleFormControlFile1" class="mb-2">Date <span style="color: red;">*</span> &nbsp;&nbsp;&nbsp; </label>
+            <input type="date" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="exampleFormControlFile1" class="mb-2">Image <span style="color: red;">*</span> &nbsp;&nbsp;&nbsp; </label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+
+          <div class="form-group mb-2" style="margin-top: 10px;">
+            <label for="exampleFormControlInput1" class="mb-2" style="margin-right: 10px;">Status <span style="color: red;">*</span> </label>
+            <!-- <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Model"> -->
+            <select name="Status">
+              <option value="Laptop">Publish</option>
+              <option value="Mouse">UnPublish</option>
+              
+            </select>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="modal-footer" style="background-color: rgb(240, 237, 233);">
+
+        <button mat-flat-button color="warn" (click)="modal.close('Close click')" style="margin-right: 10px;">Close</button>
+        <button mat-flat-button color="primary" (click)="modal.close('Close click')">Add</button>
+
+      </div>
+
+
+    </ng-template>
+
+  <!-- For update modal -->
+  
+    <ng-template #update let-modal>
+
+      <div class="modal-header" style="background-color: hsl(33, 41%, 95%);">
+        <h4  style="padding-left: 30%; font-size: 20px;">Edit Seminar</h4>
+      </div>
+
+      
+      <div class="modal-body" style="background-color: rgb(243, 239, 234);">
+
+        <form>
+
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlInput1" class="mb-2">Seminar Title <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seminar Title">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlInput1" class="mb-2">Seminar ID <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seminar ID">
+          </div>
+
+
+          <div class="form-group mb-2">
+            <label for="exampleFormControlTextarea1" class="mb-2">Details <span style="color: red;">*</span></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Seminar Details"></textarea>
+          </div>
+
+          
+
+          <div class="form-group mt-3">
+            <label for="exampleFormControlFile1" class="mb-2">Date <span style="color: red;">*</span> &nbsp;&nbsp;&nbsp; </label>
+            <input type="date" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+
+
+          <div class="form-group mb-2" style="margin-top: 10px;">
+            <label for="exampleFormControlInput1" class="mb-2" style="margin-right: 10px;">Status <span style="color: red;">*</span> </label>
+            <!-- <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Model"> -->
+            <select name="Status">
+              <option value="Laptop">Publish</option>
+              <option value="Mouse">UnPublish</option>
+              
+            </select>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="modal-footer" style="background-color: rgb(240, 237, 233);">
+
+        <button mat-flat-button color="warn" (click)="modal.close('Close click')" style="margin-right: 10px;">Close</button>
+        <button mat-flat-button color="primary" (click)="modal.close('Close click')">Update</button>
+
+      </div>
+
+
+    </ng-template>
+      
+  
+  <!-- For delete modal -->
+  
+    
+    <ng-template #delete let-modal>
+
+      <div class="modal-header" style="background-color: rgb(241, 236, 229);">
+        <h4  style="padding-left: 40%; font-size: 20px;">Alert !</h4>
+      </div>
+
+      
+      <div class="modal-body" style="background-color: rgb(238, 234, 229);">
+
+        Do you want to delete ?
+
+      </div>
+
+      <div class="modal-footer" style="background-color: rgb(243, 237, 230);">
+
+        <button mat-flat-button color="warn" (click)="modal.close('Close click')" style="margin-right: 10px;">Close</button>
+        <button mat-flat-button color="primary" (click)="modal.close('Close click')">Delete</button>
+
+      </div>
+
+
+    </ng-template>
+
+  
+  <!-- For publish modal -->
+    <ng-template #publish let-modal>
+
+      <div class="modal-header" style="background-color: rgb(241, 236, 229);">
+        <h4  style="padding-left: 40%; font-size: 20px;">Alert !</h4>
+      </div>
+
+      
+      <div class="modal-body" style="background-color: rgb(238, 234, 229);">
+
+        Do you want to publish ?
+
+      </div>
+
+      <div class="modal-footer" style="background-color: rgb(243, 237, 230);">
+
+        <button mat-flat-button color="warn" (click)="modal.close('Close click')" style="margin-right: 10px;">Close</button>
+        <button mat-flat-button color="primary" (click)="modal.close('Close click')">Publish</button>
+
+      </div>
+
+
+    </ng-template>
+
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field appearance="standard">
+          <mat-label>Search</mat-label>
+          <input matInput (keyup)="filterData($event)"  autocomplete="off">
+        </mat-form-field>
+      </div>
+    </div>
+      
+  
+    <!-- <div class="col">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"  matSort>
+
+
+        <ng-container matColumnDef="checkbox">
+          <th mat-header-cell *matHeaderCellDef> <mat-checkbox color="primary" style="width: 5%; padding-right:10px;"> </mat-checkbox> </th>
+  
+          <td mat-cell *matCellDef="let element"> <mat-checkbox color="primary" style="width: 5%; padding-right:10px;"> </mat-checkbox> </td>
+  
+        </ng-container>
+  
+        <ng-container matColumnDef="index" >
+          <th mat-header-cell *matHeaderCellDef style="width: 5%; padding-left: 15px;"> Serial</th>
+          <td mat-cell *matCellDef="let index = index" style="width: 5%; text-align: center;"> 
+              {{index+1}}
+          </td>
+        </ng-container>
+        
+        
+      
+        <ng-container matColumnDef="seminar_title">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef style="width: 15%; padding-left: 80px;"> Title </th>
+          <td mat-cell *matCellDef="let element" style="width: 15%; text-align: center;"> {{element.website_seminarTitle}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="seminar_id">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef style="width: 5%; padding-left: 40px;"> Seminar_ID </th>
+          <td mat-cell *matCellDef="let element" style="width: 5%; text-align: center;"> {{element.website_seminarId}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="details">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef style="width: 25%; padding-left: 80px;"> Details </th>
+          <td mat-cell *matCellDef="let element" style="width: 25%; text-align: justify"> {{element.website_seminarDescription}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="date">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef style="width: 5%; padding-left: 80px;"> Date </th>
+          <td mat-cell *matCellDef="let element" style="width: 5%; text-align: center; padding-left: 30px;"> 27th March, 2022 </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="image">
+          <th mat-header-cell *matHeaderCellDef style="width: 15%; padding-left: 150px;"> Image </th>
+          <td mat-cell *matCellDef="let element" style="width: 15%; padding-left: 100px;"> 
+            <img src="http://localhost:3000/{{element.website_seminarImagePath}}" alt="product image" width="100" height="50">
+          
+          </td>
+        </ng-container>
+  
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef style="width: 10%; padding-left: 100px;"> Status </th>
+          <td mat-cell *matCellDef="let element" style="width: 10%; text-align: right;">  
+
+            
+
+            <span *ngIf="element.website_seminarPublish == 1; else unPublish">
+              Published
+            </span>
+
+            <ng-template #unPublish>
+              Unpublished
+            </ng-template>
+          </td>
+        </ng-container> 
+
+
+
+
+        
+        <ng-container matColumnDef="action">
+          <th mat-header-cell  *matHeaderCellDef style="width: 15%; padding-left: 80px;"> Action </th>
+          <td mat-cell *matCellDef="let element" style="width: 15%; text-align: right;">  
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="margin:5px; color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="margin:5px; color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="margin:5px; color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+        </ng-container>
+      
+        
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+      </table>
+  
+  
+      <mat-paginator #paginator
+          [pageSize]="5"
+          [pageSizeOptions]="[5,10, 25, 100]"
+      >
+      </mat-paginator>
+    </div> -->
+  
+
+
+    <table class="table  table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Serial</th>
+          <th scope="col">Seminar Name</th>
+          <th scope="col">Seminar ID</th>
+          <th scope="col">Seminar Details</th>
+          <th scope="col">Seminar Image</th>
+          <th scope="col">Published Date</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">1</td>
+          <td>Seminar 1</td>
+          <td>1001</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/product12.jpeg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+         
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+
+        <tr>
+          <td scope="row">2</td>
+          <td>Seminar 2 </td>
+          <td>1002</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/webdev.jpg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+         
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+
+        <tr>
+          <td scope="row">3</td>
+          <td>Seminar 3</td>
+          <td>1003</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/web1.jpg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+         
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+
+        <tr>
+          <td scope="row">4</td>
+          <td>Seminar 4</td>
+          <td>1001</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/web2.jpg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+         
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+
+        <tr>
+          <td scope="row">5</td>
+          <td>Seminar 5</td>
+          <td>1001</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/webb3.jpg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+          
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+
+        <tr>
+          <td scope="row">6</td>
+          <td>Seminar 6</td>
+          <td>1006</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/web-development.jpg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+         
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+
+        <tr>
+          <td scope="row">7</td>
+          <td>Seminar 7</td>
+          <td>1007</td>
+          <td> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, quia. </td>
+          <td><img src="../../../../../assets/product12.jpeg" alt="Seminar image" width="100px" height="50px"></td>
+          <td>7th April, 2022</td>
+         
+          <td style="padding-top: 20px;">
+            <mat-icon (click)="openSm(update)" matTooltip="Edit" matTooltipPosition="below" style="color: rgb(99, 170, 99);">edit</mat-icon>
+            <mat-icon (click)="openSm(delete)" matTooltip="delete" matTooltipPosition="below" style="color: rgb(226, 93, 93);">delete</mat-icon>
+            <mat-icon (click)="openSm(publish)" matTooltip="publish" matTooltipPosition="below" style="color: rgb(83, 159, 221);">publish</mat-icon>
+          </td>
+         
+        </tr>
+        
+      </tbody>
+
+      
+    </table>
+
+    <mat-paginator #paginator
+          [pageSize]="7"
+          [pageSizeOptions]="[7,10, 25, 100]"
+      >
+    </mat-paginator>
+  </div>
+  

@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+  }
+  
+  th{
+    background-color: rgb(59, 133, 202);
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    padding-left: 50px;
+  
+  }
+  
+  td{
+    background-color: rgb(245, 243, 240);
+    padding-left: 50px;
+  }
+  
+  td, th {
+    width: 15%;
+  }

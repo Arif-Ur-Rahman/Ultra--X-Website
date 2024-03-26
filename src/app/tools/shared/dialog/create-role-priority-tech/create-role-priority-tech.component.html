@@ -1,0 +1,28 @@
+<!-- <h1 mat-dialog-title>Create {{title}}</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="createRoleForm" (ngSubmit) ="createRole()">
+
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Role Title</mat-label>
+                <input matInput placeholder="Create a role" formControlName="role_title"/>
+            </mat-form-field>
+        </div>
+            <button  mat-button mat-raised-button color="primary">Submit</button>
+
+    </form>
+</div> -->
+
+<h1 mat-dialog-title>Create {{title}}</h1>
+<form class="example-form" [formGroup]="createRoleForm" (ngSubmit) ="Create()">
+    <div mat-dialog-content>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Create a role" formControlName="title"/>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>No</button>
+    <button mat-button cdkFocusInitial>Submit</button>
+    </div>
+</form>

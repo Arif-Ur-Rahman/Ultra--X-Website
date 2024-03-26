@@ -1,0 +1,54 @@
+<app-fab-button
+  [check_modal]="isClicked"
+  (myOutput)="shareIdeaDialogOpen($event)"
+></app-fab-button>
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="Pending">
+    <!-- <div class="w-f md:w-auto container"> -->
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <!-- </div> -->
+  </mat-tab>
+  <mat-tab label="Approved">
+    <!-- <div class="w-f md:w-auto container"> -->
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <!-- </div> -->
+  </mat-tab>
+  <mat-tab label="Rejected">
+    <!-- <div class="w-f md:w-auto container"> -->
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+      <app-idea-card [check_details]="IsDetails"></app-idea-card>
+    <!-- </div> -->
+  </mat-tab>
+</mat-tab-group>

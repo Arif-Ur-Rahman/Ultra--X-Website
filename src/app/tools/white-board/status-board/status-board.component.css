@@ -1,0 +1,76 @@
+/* .container {
+  background-color: rgb(29, 144, 179);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: none;
+  max-width: 100rem;
+} */
+/* .container .summary {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.container .summary .status {
+  margin: 5px;
+  width: auto;
+  display: flex;
+  flex-grow: 5;
+  flex-direction: column;
+}
+.container .summary .status .status-title {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .summary .status .status-counting {
+  background-color: rgb(148, 188, 201);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+table {
+  width: 100%;
+}
+
+th{
+  background-color: rgb(59, 133, 202);
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+
+}
+
+td{
+  background-color: rgb(245, 243, 240);
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+.mat-column-number {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-time {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.filter-container {
+  display: flex;
+  flex-grow: 1;
+  min-width: none;
+  max-width: 100rem;
+}
+.mat-form-field {
+  width: 100%;
+  padding: 0 1rem;
+}

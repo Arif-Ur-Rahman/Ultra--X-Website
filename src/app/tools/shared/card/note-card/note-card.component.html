@@ -1,0 +1,71 @@
+<mat-card>
+  <button class="importent-button" mat-icon-button (click)= toggleImportent()>
+     <mat-icon> {{importent ? 'star' : 'star_border'}}</mat-icon>
+  </button>
+
+  <button
+    class="more-button"
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item (click)="openEditDialog()">
+      <mat-icon>edit</mat-icon>
+      <span>Edit</span>
+    </button>
+    <button mat-menu-item (click)="openDeleteDialog()">
+      <mat-icon>delete</mat-icon>
+      <span>Delete</span>
+    </button>
+    <button mat-menu-item (click)="openArchiveDialog()">
+      <mat-icon>archive</mat-icon>
+      <span>Archive</span>
+    </button>
+    <button mat-menu-item (click)="openReadDialog()">
+      <mat-icon>fullscreen</mat-icon>
+      <span>Read</span>
+    </button>
+  </mat-menu>
+
+  <mat-card-title>Note Title</mat-card-title>
+  <mat-card-subtitle>3/25/2022</mat-card-subtitle>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div class="note-details">
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.Some quick example text to build on the card title and
+      make up the bulk of the card's content.Some quick example text to build on
+      the card title and make up the bulk of the card's content.Some quick
+      example text to build on the card title and make up the bulk of the card's
+      content.Some quick example text to build on the card title and make up the
+      bulk of the card's content.Some quick example text to build on the card
+      title and make up the bulk of the card's content.Some quick example text
+      to build on the card title and make up the bulk of the card's content.Some
+      quick example text to build on the card title and make up the bulk of the
+      card's content.Some quick example text to build on the card title and make
+      up the bulk of the card's content.Some quick example text to build on the
+      card title and make up the bulk of the card's content.Some quick example
+      text to build on the card title and make up the bulk of the card's
+      content.Some quick example text to build on the card title and make up the
+      bulk of the card's content.Some quick example text to build on the card
+      title and make up the bulk of the card's content.Some quick example text
+      to build on the card title and make up the bulk of the card's content.Some
+      quick example text to build on the card title and make up the bulk of the
+      card's content.Some quick example text to build on the card title and make
+      up the bulk of the card's content.Some quick example text to build on the
+      card title and make up the bulk of the card's content.Some quick example
+      text to build on the card title and make up the bulk of the card's
+      content.
+    </div>
+  </mat-card-content>
+  <!-- <mat-divider></mat-divider> -->
+  <!-- <mat-card-actions align="end">
+    <button mat-button>Edit</button>
+    <button mat-button>Delete</button>
+    <button mat-button>Read</button>
+  </mat-card-actions> -->
+</mat-card>
+<br />

@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+      <!-- <h2 style="background-color: aqua; text-align: center;">Welcome to Main Dashboard</h2> -->
+  
+      <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(211, 43, 147); text-align: center;">Yearly Completed Project</h2>
+
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [type]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+        
+      </div>
+
+      <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(211, 43, 147); text-align: center;">Project Member Assign</h2>
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+            [data]="barChartData2"
+            [options]="barChartOptions2"
+            [plugins]="barChartPlugins2"
+            [type]="barChartType2"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+        </div>
+        
+      </div>
+
+      <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(211, 43, 147); text-align: center;">Project Status</h2>
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+            [data]="barChartData3"
+            [options]="barChartOptions3"
+            [plugins]="barChartPlugins3"
+            [type]="barChartType3"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+        </div>
+        
+      </div>
+
+      <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(211, 43, 147); text-align: center;">Used Technology</h2>
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+            [data]="barChartData4"
+            [options]="barChartOptions4"
+            [plugins]="barChartPlugins4"
+            [type]="barChartType4"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+        </div>
+        
+      </div>
+
+      <!-- <div class="col-6 chart_one">
+        <h2 style="background-color: rgb(211, 43, 147); text-align: center;">Bar Chart</h2>
+        <div class="chart">
+          <canvas baseChart width="200" height="200"
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [type]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>
+        </div>
+        
+      </div> -->
+
+  
+    
+      
+    </div>
+  
+  </div>

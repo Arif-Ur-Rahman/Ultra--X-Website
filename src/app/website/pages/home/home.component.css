@@ -1,0 +1,299 @@
+#slider{
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+
+.paragarab{
+    text-align: justify;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 30px;
+}
+
+.heading{
+    font-size:30px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+}
+
+/* // about */
+
+.about{
+    background-color: rgb(253, 255, 255);
+    padding: 0px 70px;
+}
+
+.padding_bottom{
+    padding-bottom: 100px;
+}
+
+
+.about_part{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+.about_head{
+    font-weight: bold;
+    color: rgb(76, 162, 212);
+}
+
+
+/* product css start  */
+
+
+.displaying{
+    margin: 0px 70px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 50px;
+    /* margin-top: 50px; */
+  }
+  .card-title{
+      text-align: center;
+  }
+  .card-text{
+      text-align: justify;
+  }
+  .card-body h1{
+      text-align: center;
+      color: crimson;
+  }
+  .card-body .btn{
+      background-color: rgb(243, 240, 240);
+      color: black;
+      border: none;
+      margin-bottom: 0px;
+      align-items: center;
+      width: 100%;
+  }
+  .card-body .btn:hover{
+      background-color: crimson;
+      color: white;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+      
+    box-shadow: 0 16px 32px 0 rgba(36, 25, 25, 0.2);
+  }
+
+  .row{
+      padding-top: 20px;
+  }
+
+  .webb{
+      background-color: rgb(240, 255, 240);
+      color: black;
+  }  
+  
+.PC{
+    background-color: rgb(255, 226, 226);
+    color: black;
+}
+.android{
+    background-color: rgb(243, 226, 243);
+    color: black;
+}
+.iot{
+    background-color: rgb(178, 208, 224);
+    color: black;
+}
+  
+  
+
+
+
+
+
+
+
+
+/* seminar  */
+
+.seminar{
+    background-color: rgb(13, 15, 36);
+    color: rgb(107, 24, 24);
+    padding-bottom: 50px;
+}
+
+.seminar1{
+    width: 350px;
+    height: 550px;
+    background-color: rgb(241, 228, 228) ;
+    margin: 15px;
+    text-align: center;
+}
+
+
+.news_button{
+    width: 50px ;
+    height: 30px;
+}
+
+.main_scroll{
+    /* overflow: hidden;
+    overflow-y: scroll;
+    height: 2500px; */
+    margin-left: 16.5%;
+    scrollbar-width: none;
+    margin-top: 50px;
+}
+
+.main_scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.text_right{
+   text-align: right;
+   padding-right: 100px;
+   padding-top: 40px;
+}
+
+.develop_product{
+     background-color: rgb(48, 50, 77);
+     margin: 0px 70px;
+}
+
+.develop_product_padding{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+ /* Made by Arip */
+
+.edit{
+    margin-top: 50px;
+    color: black;
+    border-radius: 10px;
+    background-color: rgb(224, 208, 208);
+    box-sizing: border-box;
+    border: crimson;
+    
+}
+
+
+ /* start contact css  */
+
+
+ .contact{
+     margin: 0px 70px;
+ }
+
+
+
+
+/* Media Query Start */
+
+@media (max-width:800px){
+    .main_scroll{
+        /* overflow: hiddden;
+        overflow-y: scroll;
+        height: 2500px; */
+        margin-left: 0px;
+        scrollbar-width: none;
+        text-align: center;
+    }
+
+
+    .paragarab{
+        text-align: justify;
+        font-family:Arial, Helvetica, sans-serif;
+        line-height: 25px;
+    }
+    
+    .heading{
+        font-size:22px;
+        font-weight: bold;
+        margin-top: 5px;
+        padding-bottom: 35px;
+        padding-top: 35px;
+    }
+
+    .develop_product{
+        background-color: rgb(48, 50, 77);
+        margin :0px 10px;
+        margin-bottom: 50px;
+    }
+
+    .develop_product_padding{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .about{
+        padding: 0px 0px;
+        text-align: center;
+    }
+
+    .displaying{
+        margin: 0px 0px;
+    }
+
+    .contact{
+        margin: 0px 0px;
+    }
+
+    
+}
+
+
+
